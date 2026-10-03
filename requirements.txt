@@ -1,0 +1,6 @@
+dash>=2.14
+pandas
+plotly
+scikit-learn
+joblib
+gunicorn
