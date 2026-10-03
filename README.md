@@ -2,7 +2,7 @@
 
 An interactive web dashboard that detects **spam messages** and **malicious or phishing links** in real time. It combines a machine-learning text classifier with a rule-based link analyzer and presents the results in a clean, visual dashboard built with Plotly Dash.
 
-**🔗 Live demo:** [https://spam-detector-vuwf.onrender.com](https://spam-detector-vuwf.onrender.com)
+**🔗 Live demo:** https://spam-detector-vuwf.onrender.com
 
 ## ✨ Features
 
@@ -89,7 +89,7 @@ python train_model.py
 # 6. Start the dashboard
 python app.py
 ```
-
+Open http://127.0.0.1:8050 in your browser.
 
 ## 📊 Training Data
 
@@ -121,4 +121,5 @@ This project is licensed under the MIT License. Add a `LICENSE` file to the repo
 ## 👤 Author
 
 **Archana V S**
-GitHub: [@ArchanaVS2004][https://github.com/ArchanaVS2004]
+GitHub: @ArchanaVS2004
+https://github.com/ArchanaVS2004
