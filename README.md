@@ -4,10 +4,6 @@ An interactive web dashboard that detects **spam messages** and **malicious or p
 
 **🔗 Live demo:** [https://spam-detector-vuwf.onrender.com](https://spam-detector-vuwf.onrender.com)
 
-> The demo runs on a free hosting tier, so the first load after a period of inactivity may take up to a minute while the server wakes up.
-
----
-
 ## ✨ Features
 
 - **Spam classification:** TF-IDF + Logistic Regression model that gives a spam probability for any message.
@@ -94,11 +90,10 @@ python train_model.py
 python app.py
 ```
 
-Open **http://127.0.0.1:8050** in your browser.
 
 ## 📊 Training Data
 
-For best accuracy, download the **SMS Spam Collection** dataset (available on [Kaggle](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset) and the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/228/sms+spam+collection)) and save it as `spam.csv` in the project root. The file should contain two columns:
+For best accuracy, download the **SMS Spam Collection** dataset (available on [Kaggle](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset) and save it as `spam.csv` in the project root. The file should contain two columns:
 
 | Column | Meaning |
 |---|---|
@@ -107,16 +102,6 @@ For best accuracy, download the **SMS Spam Collection** dataset (available on [K
 
 If `spam.csv` is not present, the app falls back to a small built-in demo dataset, which is fine for testing but much less accurate. When the real dataset is used, `train_model.py` holds out 20% of the data and prints accuracy and a classification report.
 
-## ☁️ Deployment (Render)
-
-1. Push this repository to GitHub.
-2. On [render.com](https://render.com), create a **New → Web Service** and connect the repo.
-3. Use these settings:
-   - **Build command:** `pip install -r requirements.txt && python train_model.py`
-   - **Start command:** `gunicorn app:server --bind 0.0.0.0:$PORT --workers 1 --timeout 120`
-   - **Environment variables:** `DEBUG=0`, `PYTHON_VERSION=3.11.9`
-4. Deploy. Every `git push` to `main` triggers an automatic redeploy.
-
 ## ⚠️ Limitations
 
 - The link analyzer is **heuristic-based**; it does not check live reputation databases, so it can miss new phishing domains or flag harmless ones.
@@ -124,14 +109,6 @@ If `spam.csv` is not present, the app falls back to a small built-in demo datase
 - Treat results as a **decision aid**, not a guarantee of safety.
 - Messages are processed on the server for analysis and are not stored; history exists only in your browser session.
 
-## 🗺️ Roadmap
-
-- [ ] Batch analysis via CSV upload
-- [ ] Integration with Google Safe Browsing / PhishTank for link reputation
-- [ ] Model comparison (Naive Bayes, SVM, transformer-based models)
-- [ ] Multi-language support
-- [ ] Persistent history using SQLite
-- [ ] Dark mode
 
 ## 🤝 Contributing
 
@@ -143,5 +120,5 @@ This project is licensed under the MIT License. Add a `LICENSE` file to the repo
 
 ## 👤 Author
 
-**Your Name**
-GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+**Archana V S**
+GitHub: [@ArchanaVS2004][https://github.com/ArchanaVS2004]
